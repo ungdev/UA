@@ -1,0 +1,12 @@
+[submodule "front"]
+	path = front
+	url = https://github.com/ungdev/UA-front
+[submodule "api"]
+	path = api
+	url = https://github.com/ungdev/UA-api
+[submodule "turbosecu"]
+	path = turbosecu
+	url = https://github.com/ungdev/UA-appli-secu
+[submodule "turbobouffe"]
+	path = turbobouffe
+	url = https://github.com/ungdev/UA-bouffe
