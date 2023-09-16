@@ -15,7 +15,11 @@ git clone git@github.com:ungdev/UA
 git submodule init
 git submodule update
 
-# Pour installer les dépendances des projets il faut ensuite parcourir les sous-modules et installer leurs dépendances comme expliqué dans la doc ou dans le readme de chaque projet.
+# Pour installer les dépendances des projets
+npm install -g yarn pnpm # Installe les gestionnaires de paquets 
+pnpm web:install # Installe les dépendances du projet web
+pnpm turbobouffe:install # Installe les dépendances du projet turbobouffe
+pnpm turbosecu:install # Installe les dépendances du projet turbosecu
 ```
 
 ## Travailler avec les sous-modules
