@@ -14,8 +14,11 @@ git clone --recurse-submodules git@github.com:ungdev/UA
 git clone git@github.com:ungdev/UA
 git submodule init
 git submodule update
+```
 
-# Pour installer les dépendances des projets
+### Pour installer les dépendances des projets
+
+```sh
 npm install -g yarn pnpm # Installe les gestionnaires de paquets 
 pnpm web:install # Installe les dépendances du projet web
 pnpm turbobouffe:install # Installe les dépendances du projet turbobouffe
