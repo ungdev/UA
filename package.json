@@ -1,0 +1,17 @@
+{
+  "name": "ua",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web:install": "cd ./api && pnpm install && cd ../front && pnpm install",
+    "web:start": "concurrently \"cd ./api && pnpm dev\" \"cd ./front && pnpm dev\"",
+    "turbobouffe:install": "cd ./turbobouffe && git submodule init && git submodule update && cd front && yarn && cd ../api && yarn",
+    "turbobouffe:start": "cd ./turbobouffe && docker compose up",
+    "turbosecu:install": "cd ./turbosecu && flutter pub get",
+    "turbosecu:start": "cd ./turbosecu && flutter run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
