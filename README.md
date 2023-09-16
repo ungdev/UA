@@ -25,6 +25,14 @@ pnpm turbobouffe:install # Installe les dépendances du projet turbobouffe
 pnpm turbosecu:install # Installe les dépendances du projet turbosecu
 ```
 
+### Pour lancer les projets
+
+```sh
+pnpm web:start # Lance le projet web
+pnpm turbobouffe:start # Lance le projet turbobouffe
+pnpm turbosecu:start # Lance le projet turbosecu
+```
+
 ## Travailler avec les sous-modules
 
 Voici le lien de la documentation officielle de git pour travailler avec les sous-modules : https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules
