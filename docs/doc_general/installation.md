@@ -110,7 +110,7 @@ Exécutez `CREATE DATABASE arena CHARACTER SET utf8;` dedans. Cela va créer une
 Depuis le terminal Ubuntu, dans le dossier du projet "UA API" que vous avez obtenu en clonant depuis GitHub, effectuez :
 
 - `cp .env.example .env`. Ensuite, modifiez la variable `DATABASE_URL` dans le `.env` avec la valeur `mysql://root:@localhost/arena`
-- `pnpm prisma db push`
+- `pnpm pnpx prisma db push`
 - `pnpm fake` Commande optionnelle pour générer des faux users et fausses équipes.
 
 Si tout ce passe bien, vous devriez avoir un retour avec marqué, entre autres, `Your database is now in sync with your schema`.
@@ -141,7 +141,7 @@ Si ce n'est pas déjà fait, copiez le fichier `.env.example`. Pour ce faire, ta
 
 On va maintenant installer les dépendances manquantes. Pour cela, entrez juste `pnpm`.
 Il faut ensuite configurer les fichiers pour la base de données. Il faut entrer la commande suivante : \
-`pnpm prisma db push` - cela va créer les tables de la base de données ainsi que leur structure.
+`pnpm pnpx prisma db push` - cela va créer les tables de la base de données ainsi que leur structure.
 
 Maintenant la base de données configurée, nous allons la remplir grâce au fichier seed.sql qui se trouve dans le dossier. Entrez `mysql -u dev -p arena < seed.sql` pour, dans un premier temps se connecter à la base de données puis dans un second temps remplir cette base de données avec les informations du fichier seed.sql. Le mot de passe à utiliser quand il est demandé est `dev`.
 
