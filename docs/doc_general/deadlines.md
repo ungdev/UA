@@ -10,7 +10,7 @@
 
 Principalement du front à faire
 
-## Netgame - début novembre
+## Netgame (potentiellement)
 
 - Turbobouffe
 
