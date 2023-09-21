@@ -12,7 +12,7 @@ Dans le menu démarrer de Windows, cherchez `Invite de commandes`, et exécutez 
 
 > Si le nom de WSL vous dit déjà quelque chose et que vous l'avez déjà utilisé sur votre machine, exécutez `wsl -l -v`. La commande vous donnera le nom de la version utilisée (eg. _Ubuntu_ ou _Ubuntu-20.04_). Utilisez le maintenant dans la commande `wsl --set-version <version> 2`. [Passez ensuite à la section suivante](#setup-de-visual-studio-code) s'il n'y a pas d'erreur.
 
-Pour installer WSL 1, exécutez `wsl --set-default-version 2` **puis** `wsl --install`. Il est également possible d'utiliser WSL 2 mais ce sera plus compliqué pour installer la base de données _(et ce n'est pas détaillé dans cette doc)_
+Pour installer WSL 2, exécutez `wsl --set-default-version 2` **puis** `wsl --install`.
 
 > Si la méthode rapide a fonctionné, vous pouvez [passer à la section suivante](#setup-de-visual-studio-code).
 
