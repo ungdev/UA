@@ -97,35 +97,6 @@ Désormais, exécutez `pnpm install` et laissez les dépendances s'installer !
 
 Afin de tester le code dans de bonnes conditions, vous aurez besoin de créer une base de donnée locale, avec laquelle votre code va interagir.
 
-# Utiliser Wamp
-
-Télécharger Wampserver sur https://sourceforge.net/projects/wampserver et lancez le fichier d'installation (cliquer sur suivant suivant....).
-
-Lancez Wampserver64 depuis le menu Démarrer.
-
-À droite de votre barre des tâches (peut être dans les icônes cachées), une icône avec un W dedans devrait apparaître. Attendez que l'icône soit verte. Cliquez dessus (clique gauche simple) -> MySQL -> console MySQL -> OK -> enter password : 'ENTREE' (on ne met pas de mot de passe). Avec cette suite d'actions, votre invite de commande MySQL devrait être ouverte.
-
-Exécutez `CREATE DATABASE arena CHARACTER SET utf8;` dedans. Cela va créer une base de données vide, nommée "arena" et encodée en UTF8.
-
-Depuis le terminal Ubuntu, dans le dossier du projet "UA API" que vous avez obtenu en clonant depuis GitHub, effectuez :
-
-- `cp .env.example .env`. Ensuite, modifiez la variable `DATABASE_URL` dans le `.env` avec la valeur `mysql://root:@localhost/arena`
-- `pnpm pnpx prisma db push`
-- `pnpm fake` Commande optionnelle pour générer des faux users et fausses équipes.
-
-Si tout ce passe bien, vous devriez avoir un retour avec marqué, entre autres, `Your database is now in sync with your schema`.
-_Si prisma n'arrive pas à se connecter à la base de données (ERR: P1001), [assurez vous d'utiliser WSL 1](#méthode-rapide)._
-
-Ensuite, ouvrez PhpMyAdmin (une interface graphique pour interagir avec la base de données locale) en cliquant sur l'icône de Wampserver dans la barre des tâches (clic gauche), puis sur PhpMyAdmin.
-Une page web locale va s'ouvrir. Si des codes sont demandés, entrez "root" en tant que Username, et laissez le champ du mot de passe vide. Le type de base de donnée doit être MySQL.
-Une fois connecté, cliquez sur "arena" sur la liste des bases de données à gauche. Vous avez maintenant une vue globale sur le contenu de cette base de données. Vers le haut de la fenêtre, accédez à l'onglet SQL. Vous aurez la possibilité d'exécuter des requêtes SQL, et c'est d'ailleurs ce que vous devez faire :
-
-- Dans Visual Studio Code, projet UA-api, copiez intégralement le contenu du fichier `seed.sql` (il est au premier niveau de l'arborescence des dossiers, il ne devrait pas être compliqué à trouver).
-- Collez le tout sur phpMyAdmin, sur le champ de requête auquel vous venez d'accéder.
-- Cliquez sur `Exécuter`
-
-Félicitation, vous venez d'importer toutes les données dans la base de données locale. Faites attention à ne pas répéter cette dernière opération plusieurs fois, car cela affichera un message d'erreur. Vous pouvez maintenant fermer phpMyAdmin, ou vous amuser à explorer la base de données.
-
 # Utiliser mysql
 
 Ouvrez votre invite de commande Ubuntu et entrez la commande `sudo apt install mysql-server`.
